@@ -133,17 +133,10 @@ function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById('operator').textContent = "x";
 }
 
+// Add your division question here
 function displayDivisionQuestion(operand1, operand2) {
-    // Generate the divisor (operand2) first
-    operand2 = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
-
-    // Generate a quotient (the answer to the division problem)
-    let quotient = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
-
-    // Calculate the dividend (operand1) by multiplying the divisor and the quotient
-    operand1 = operand2 * quotient;
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "/";
+    operand1 = operand1 * operand2;
+    document.getElementById("operand1").textContent = operand1;
+    document.getElementById("operand2").textContent = operand2;
+    document.getElementById("operator").textContent = "/";
 }
